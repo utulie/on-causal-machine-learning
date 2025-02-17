@@ -44,7 +44,7 @@ The challenge arises when $m(X)$ is unknown and may be high-dimensional, leading
    - Calculate the average treatment effect:
    
    $$
-   \hat{\theta} = \frac{1}{n} \sum_{i=1}^n \tilde{Y}_i \tilde{T}_i
+   \hat{\theta} = \mathbb{E}(\tilde{Y}_i|\tilde{T}_i)
    $$
 
 ## References
