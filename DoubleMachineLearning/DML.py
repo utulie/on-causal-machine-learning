@@ -30,11 +30,11 @@ model_Y.fit(X_train, Y_train)
 Y_residual = Y_test - model_Y.predict(X_test)  # Residuals for Y
 
 # Step 2: Fit causal model (regress Y_residual on T_residual)
-model_theta = LinearRegression()
-model_theta.fit(T_residual.reshape(-1, 1), Y_residual)
+theta_estimator = LinearRegression()
+theta_estimator.fit(T_residual.reshape(-1, 1), Y_residual)
 
 # Estimated causal effect
-estimated_theta = model_theta.coef_[0]
+estimated_theta = theta_estimator.coef_[0]
 print(f"Estimated causal effect: {estimated_theta}")
 
 # Reference: Double Machine Learning by Chernozhukov et al. (2018)
