@@ -8,9 +8,9 @@ The DML estimator is formulated as follows:
 
 1. Estimate the nuisance parameters:
 
-   \[
-   \hat{m}(X) = \text{argmin}_m \, \mathbb{E}[(Y - m(X))^2]
-   \]
+
+  $$ \hat{m}(X) = \text{argmin}_m \, \mathbb{E}[(Y - m(X))^2]$$
+
 
    \[
    \hat{g}(X) = \text{argmin}_g \, \mathbb{E}[(T - g(X))^2]
