@@ -2,7 +2,7 @@
 
 ## Description
 
-In high-dimensional data, traditional methods for estimating causal effects can be biased due to unobserved confounders. The causal effect of a treatment \( T \) on an outcome \( Y \) can be expressed as:
+In high-dimensional data, traditional methods for estimating causal effects can be biased due to unobserved confounders. The causal effect of a treatment $T$ on an outcome $Y$ can be expressed as:
 
 $$
 Y_i = m(X_i) + \theta T_i + \epsilon_i
