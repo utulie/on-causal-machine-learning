@@ -9,17 +9,17 @@ Y_i = m(X_i) + \theta T_i + \epsilon_i
 $$
 
 where:
-- \( Y_i \) is the outcome for observation \( i \)
-- \( T_i \) is the treatment indicator
-- \( m(X_i) \) represents the effect of control variables \( X \)
-- \( \epsilon_i \) is the error term
+- $Y_i$ is the outcome for observation $i$
+- $T_i$ is the treatment indicator
+- $m(X_i)$ represents the effect of control variables \( X \)
+- $\epsilon_i$ is the error term
 
-The challenge arises when \( m(X) \) is unknown and may be high-dimensional, leading to biased estimates of \( \theta \) if not properly controlled.
+The challenge arises when $m(X)$ is unknown and may be high-dimensional, leading to biased estimates of $\theta$ if not properly controlled.
 
 ## Solution Steps
 
 1. **Estimate Nuisance Parameters**:
-   - Use machine learning to predict the outcome variable \( Y \) and treatment variable \( T \) based on control variables \( X \):
+   - Use machine learning to predict the outcome variable $Y$ and treatment variable $T$ based on control variables $X$:
    
    $$
    \hat{m}(X) = \text{argmin}_m \, \mathbb{E}[(Y - m(X))^2]
