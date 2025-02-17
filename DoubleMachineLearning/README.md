@@ -1,40 +1,55 @@
 # Double Machine Learning (DML)
 
-## Introduction
+## Problem Description
 
-Double Machine Learning (DML) is a framework for estimating causal parameters in high-dimensional settings, combining machine learning with econometric techniques. It addresses the challenge of confounding variables by employing machine learning models to control for them.
+In high-dimensional data, traditional methods for estimating causal effects can be biased due to unobserved confounders. The causal effect of a treatment \( T \) on an outcome \( Y \) can be expressed as:
 
-The DML estimator is formulated as follows:
+$$
+Y_i = m(X_i) + \theta T_i + \epsilon_i
+$$
 
-1. Estimate the nuisance parameters:
+where:
+- \( Y_i \) is the outcome for observation \( i \)
+- \( T_i \) is the treatment indicator
+- \( m(X_i) \) represents the effect of control variables \( X \)
+- \( \epsilon_i \) is the error term
 
+The challenge arises when \( m(X) \) is unknown and may be high-dimensional, leading to biased estimates of \( \theta \) if not properly controlled.
 
-  $$ \hat{m}(X) = \text{argmin}_m \, \mathbb{E}[(Y - m(X))^2]$$
+## Solution Steps
 
-
-   \[
+1. **Estimate Nuisance Parameters**:
+   - Use machine learning to predict the outcome variable \( Y \) and treatment variable \( T \) based on control variables \( X \):
+   
+   $$
+   \hat{m}(X) = \text{argmin}_m \, \mathbb{E}[(Y - m(X))^2]
+   $$
+   
+   $$
    \hat{g}(X) = \text{argmin}_g \, \mathbb{E}[(T - g(X))^2]
-   \]
+   $$
 
-2. Compute the adjusted outcome and treatment:
-
-   \[
+2. **Compute Adjusted Variables**:
+   - Remove the estimated nuisance effects:
+   
+   $$
    \tilde{Y} = Y - \hat{m}(X)
-   \]
-
-   \[
+   $$
+   
+   $$
    \tilde{T} = T - \hat{g}(X)
-   \]
+   $$
 
-3. Estimate the causal effect:
-
-   \[
+3. **Estimate Causal Effects**:
+   - Calculate the average treatment effect:
+   
+   $$
    \hat{\theta} = \frac{1}{n} \sum_{i=1}^n \tilde{Y}_i \tilde{T}_i
-   \]
+   $$
 
 ## References
 
-- Chernozhukov, V., Chetverikov, D., & Kato, K. (2018). "Double Machine Learning for Treatment and Causal Parameters." *The Annals of Statistics*, 46(2), 1-30. [Link to paper](https://projecteuclid.org/euclid.aos/1532034204).
+- Chernozhukov, V., Chetverikov, D., & Kato, K. (2018). "Double Machine Learning for Treatment and Causal Parameters." *The Annals of Statistics*, 46(2), 1-30. [Link to paper].
 
 ## License
 
