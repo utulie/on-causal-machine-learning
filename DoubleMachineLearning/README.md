@@ -49,8 +49,6 @@ The challenge arises when $m(X)$ is unknown and may be high-dimensional, leading
 
 ## References
 
-- Chernozhukov, V., Chetverikov, D., & Kato, K. (2018). "Double Machine Learning for Treatment and Causal Parameters." *The Annals of Statistics*, 46(2), 1-30. [Link to paper].
+- Chernozhukov, V., Chetverikov, D., Demirer, M., Duflo, E., Hansen, C., Newey, W., & Robins, J. (2018). Double/debiased machine learning for treatment and structural parameters. The Econometrics Journal, 21(1), C1-C68.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
