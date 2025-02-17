@@ -21,31 +21,31 @@ The challenge arises when $m(X)$ is unknown and may be high-dimensional, leading
 1. **Estimate Nuisance Parameters**:
    - Use machine learning to predict the outcome variable $Y$ and treatment variable $T$ based on control variables $X$:
    
-   $$
+   $
    \hat{m}(X) = \text{argmin}_m \, \mathbb{E}[(Y - m(X))^2]
-   $$
+   $
    
-   $$
+   $
    \hat{g}(X) = \text{argmin}_g \, \mathbb{E}[(T - g(X))^2]
-   $$
+   $
 
 2. **Compute Adjusted Variables**:
    - Remove the estimated nuisance effects:
    
-   $$
+   $
    \tilde{Y} = Y - \hat{m}(X)
-   $$
+   $
    
-   $$
+   $
    \tilde{T} = T - \hat{g}(X)
-   $$
+   $
 
 3. **Estimate Causal Effects**:
    - Calculate the average treatment effect:
    
-   $$
+   $
    \hat{\theta} = \frac{1}{n} \sum_{i=1}^n \tilde{Y}_i \tilde{T}_i
-   $$
+   $
 
 ## References
 
