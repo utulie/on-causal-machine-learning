@@ -22,11 +22,11 @@ The challenge arises when $m(X)$ is unknown and may be high-dimensional, leading
    - Use machine learning to predict the outcome variable $Y$ and treatment variable $T$ based on control variables $X$:
    
    $$
-   \hat{m}(X) = \text{argmin}_m \, \mathbb{E}[(Y - m(X))^2]
+   \hat{m}(X) = \text{argmin}_m \mathbb{E}[(Y - m(X))^2]
    $$
    
    $$
-   \hat{g}(X) = \text{argmin}_g \, \mathbb{E}[(T - g(X))^2]
+   \hat{g}(X) = \text{argmin}_g \mathbb{E}[(T - g(X))^2]
    $$
 
 
@@ -41,11 +41,9 @@ The challenge arises when $m(X)$ is unknown and may be high-dimensional, leading
    $$
 
 
-   - Calculate the average treatment effect:
+   - Calculate the average treatment effect via linear regression
    
-   $$
-   \hat{\theta} = \mathbb{E}(\tilde{Y}_i|\tilde{T}_i)
-   $$
+
 
 ## References
 
