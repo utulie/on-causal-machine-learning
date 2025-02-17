@@ -1,2 +1,2 @@
-# on-CausalMachineLearning
-models and project about causal machine learning
+# CausalMachineLearning
+models and projects about causal machine learning
