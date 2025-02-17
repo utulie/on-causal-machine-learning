@@ -1,6 +1,6 @@
 # Double Machine Learning (DML)
 
-## Problem Description
+## Description
 
 In high-dimensional data, traditional methods for estimating causal effects can be biased due to unobserved confounders. The causal effect of a treatment \( T \) on an outcome \( Y \) can be expressed as:
 
