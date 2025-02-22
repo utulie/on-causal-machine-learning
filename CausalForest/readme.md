@@ -16,17 +16,17 @@ Traditional causal inference methods (e.g., linear regression, propensity score 
 ## Problem Formulation
 Under the **Potential Outcomes Framework**, we define:  
 - Individual Treatment Effect:  
-  \[
+$$
   \tau_i = Y_i(1) - Y_i(0)
-  \]  
+ $$
 - Conditional Average Treatment Effect (CATE):  
-  \[
+ $$
   \tau(x) = \mathbb{E}[Y(1) - Y(0) \mid X = x]
-  \]  
+ $$ 
 
 **Assumptions**:  
-1. Unconfoundedness: \( W \perp \!\!\! \perp (Y(1), Y(0)) \mid X \)  
-2. Overlap: \( 0 < P(W=1 \mid X) < 1 \)  
+1. Unconfoundedness: $ W \perp \!\!\! \perp (Y(1), Y(0)) \mid X $
+2. Overlap: $ 0 < P(W=1 \mid X) < 1 $
 
 ---
 
@@ -34,27 +34,27 @@ Under the **Potential Outcomes Framework**, we define:
 
 ### 1. Single Causal Tree Construction
 **Splitting Criterion**: Maximize treatment effect variance between child nodes  
-\[
+$$
 \Delta = (\hat{\tau}_L - \hat{\tau}_R)^2
-\]
-where \( \hat{\tau}_L, \hat{\tau}_R \) are effect estimates in left/right nodes.
+$$
+where $ \hat{\tau}_L, \hat{\tau}_R $ are effect estimates in left/right nodes.
 
 **Steps**:  
-1. At each node, search features/thresholds to maximize \( \Delta \)  
+1. At each node, search features/thresholds to maximize $ \Delta $
 2. Recursively split until:  
    - Node samples < `min_samples_leaf`  
    - Reaches `max_depth`  
 3. Estimate leaf effects via:  
-   \[
+   $$
    \hat{\tau}_{\text{leaf}} = \frac{1}{n_1}\sum Y_{W=1} - \frac{1}{n_0}\sum Y_{W=0}
-   \]
+   $$
 
 ### 2. Forest Ensemble
 1. **Bootstrap Aggregation**: Grow \( B \) trees on resampled datasets  
 2. **Prediction**: Average effects across all trees  
-   \[
+   $$
    \hat{\tau}(x) = \frac{1}{B}\sum_{b=1}^B \hat{\tau}_b(x)
-   \]
+   $$
 
 ---
 
