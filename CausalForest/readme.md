@@ -36,8 +36,7 @@ where $\hat{\tau}_L, \hat{\tau}_R$ are effect estimates in left/right nodes.
 2. Recursively split until:  
    - Node samples < `min_samples_leaf`  
    - Reaches `max_depth`  
-3. Estimate leaf effects via:  
-   $$\hat{\tau}_{\text{leaf}} = \frac{1}{n_1}\sum Y_{W=1} - \frac{1}{n_0}\sum Y_{W=0}$$
+3. Estimate leaf effects via: $$\hat{\tau}_{\text{leaf}} = \frac{1}{n_1}\sum Y_{W=1} - \frac{1}{n_0}\sum Y_{W=0}$$
 
 ### 2. Forest Ensemble
 1. **Bootstrap Aggregation**: Grow $B$ trees on resampled datasets  
