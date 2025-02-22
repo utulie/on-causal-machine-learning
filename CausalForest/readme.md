@@ -3,7 +3,7 @@
 A Python implementation of Causal Forest, designed to estimate conditional average treatment effects (CATE) from observational data.  
 **Key Feature**: Non-parametric estimation of treatment effect heterogeneity without external ML library dependencies.
 
-
+---
 
 ## Background
 Traditional causal inference methods (e.g., linear regression, propensity score matching) often assume homogeneous treatment effects or rely on strong parametric assumptions. **Causal Forest** extends Random Forest to causal inference by:  
@@ -11,7 +11,7 @@ Traditional causal inference methods (e.g., linear regression, propensity score 
 2. Combining multiple causal trees to reduce variance  
 3. Handling high-dimensional confounders non-linearly  
 
-
+---
 
 ## Problem Formulation
 Under the **Potential Outcomes Framework**, we define:  
@@ -44,7 +44,11 @@ where $\hat{\tau}_L, \hat{\tau}_R$ are effect estimates in left/right nodes.
    $$\hat{\tau}(x) = \frac{1}{B}\sum_{b=1}^B \hat{\tau}_b(x)$$
 
 ---
+## Reference
+1. Wager S, Athey S. Estimation and inference of heterogeneous treatment effects using random forests[J]. Journal of the American Statistical Association, 2018, 113(523): 1228-1242.
 
+2. Athey S, Imbens G. Recursive partitioning for heterogeneous causal effects[J]. Proceedings of the National Academy of Sciences, 2016, 113(27): 7353-7360.
+---
 ## Usage Example
 ```python
 from causal_forest import CausalForest
@@ -58,3 +62,6 @@ cf.fit(X, W, Y)
 
 # Predict CATE for new samples
 tau_hat = cf.predict_effect(X_test)
+
+
+
