@@ -15,7 +15,7 @@ Traditional causal inference methods (e.g., linear regression, propensity score 
 
 ## Problem Formulation
 Under the **Potential Outcomes Framework**, we define:  
-- Individual Treatment Effect:  
+- Individual Treatment Effect:  $adsfasf$
 $$
   \tau_i = Y_i(1) - Y_i(0)
  $$
