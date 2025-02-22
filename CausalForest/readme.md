@@ -19,8 +19,8 @@ Under the **Potential Outcomes Framework**, we define:
 - Conditional Average Treatment Effect (CATE):  $$\tau(x) = \mathbb{E}[Y(1) - Y(0) \mid X = x]$$ 
 
 **Assumptions**:  
-1. Unconfoundedness: $W \perp \!\!\! \perp (Y(1), Y(0)) \mid X$
-2. Overlap: $ 0 < P(W=1 \mid X) < 1 $
+1. Unconfoundedness: $W \perp(Y(1), Y(0)) \mid X$
+2. Overlap: $0 < P(W=1 \mid X) < 1$
 
 ---
 
@@ -28,10 +28,8 @@ Under the **Potential Outcomes Framework**, we define:
 
 ### 1. Single Causal Tree Construction
 **Splitting Criterion**: Maximize treatment effect variance between child nodes  
-$$
-\Delta = (\hat{\tau}_L - \hat{\tau}_R)^2
-$$
-where $ \hat{\tau}_L, \hat{\tau}_R $ are effect estimates in left/right nodes.
+$$\Delta = (\hat{\tau}_L - \hat{\tau}_R)^2$$
+where $\hat{\tau}_L, \hat{\tau}_R$ are effect estimates in left/right nodes.
 
 **Steps**:  
 1. At each node, search features/thresholds to maximize $ \Delta $
