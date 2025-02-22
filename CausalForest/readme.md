@@ -37,16 +37,12 @@ where $\hat{\tau}_L, \hat{\tau}_R$ are effect estimates in left/right nodes.
    - Node samples < `min_samples_leaf`  
    - Reaches `max_depth`  
 3. Estimate leaf effects via:  
-   $$
-   \hat{\tau}_{\text{leaf}} = \frac{1}{n_1}\sum Y_{W=1} - \frac{1}{n_0}\sum Y_{W=0}
-   $$
+   $$\hat{\tau}_{\text{leaf}} = \frac{1}{n_1}\sum Y_{W=1} - \frac{1}{n_0}\sum Y_{W=0}$$
 
 ### 2. Forest Ensemble
-1. **Bootstrap Aggregation**: Grow \( B \) trees on resampled datasets  
-2. **Prediction**: Average effects across all trees  
-   $$
-   \hat{\tau}(x) = \frac{1}{B}\sum_{b=1}^B \hat{\tau}_b(x)
-   $$
+1. **Bootstrap Aggregation**: Grow $B$ trees on resampled datasets  
+2. **Prediction**: Average effects across all trees
+   $$\hat{\tau}(x) = \frac{1}{B}\sum_{b=1}^B \hat{\tau}_b(x)$$
 
 ---
 
