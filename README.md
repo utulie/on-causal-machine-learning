@@ -1,2 +1,2 @@
 # CausalMachineLearning
-models and projects about causal machine learning
+models and algorithms implementation about causal machine learning
