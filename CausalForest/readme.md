@@ -15,17 +15,11 @@ Traditional causal inference methods (e.g., linear regression, propensity score 
 
 ## Problem Formulation
 Under the **Potential Outcomes Framework**, we define:  
-- Individual Treatment Effect:  $adsfasf$
-$$
-  \tau_i = Y_i(1) - Y_i(0)
- $$
-- Conditional Average Treatment Effect (CATE):  
- $$
-  \tau(x) = \mathbb{E}[Y(1) - Y(0) \mid X = x]
- $$ 
+- Individual Treatment Effect:  $$\tau_i = Y_i(1) - Y_i(0) $$
+- Conditional Average Treatment Effect (CATE):  $$\tau(x) = \mathbb{E}[Y(1) - Y(0) \mid X = x]$$ 
 
 **Assumptions**:  
-1. Unconfoundedness: $ W \perp \!\!\! \perp (Y(1), Y(0)) \mid X $
+1. Unconfoundedness: $W \perp \!\!\! \perp (Y(1), Y(0)) \mid X$
 2. Overlap: $ 0 < P(W=1 \mid X) < 1 $
 
 ---
